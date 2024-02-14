@@ -39,5 +39,4 @@ public interface MethodsForMyArray<E> extends Iterable<E> {
      */
     void deleteAll();
 
-   // void quickSort(E[] arr, int a, int b);
 }

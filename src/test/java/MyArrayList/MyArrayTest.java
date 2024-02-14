@@ -5,6 +5,7 @@ import org.junit.Test;
 
 public class MyArrayTest {
     MyArray<String> myArray = new MyArray<>();
+    MyArray<String> actual = new MyArray<>();
 
     @Test
     public void add() {
@@ -69,4 +70,18 @@ public class MyArrayTest {
         Assert.assertEquals(expected, myArray.size());
     }
 
+    @Test
+    public void quickSort() {
+        myArray.add("ccc");
+        myArray.add("ddd");
+        myArray.add("bbb");
+        myArray.add("aaa");
+        MyArray.quickSort(myArray, 0, myArray.size() -1 );
+
+        actual.add("aaa");
+        actual.add("bbb");
+        actual.add("ccc");
+        actual.add("ddd");
+        Assert.assertEquals(myArray, actual);
+    }
 }
