@@ -6,10 +6,10 @@ import java.util.Iterator;
  * Кастомный Iterator для собственного ArrayList
  */
 public class IteratorForMyArray<E> implements Iterator<E> {
-    private int index = 0;
-    private E[] values;
+    private Integer index = 0;
+    private Object[] values;
 
-    public IteratorForMyArray(E[] values) {
+    public IteratorForMyArray(Object[] values) {
         this.values = values;
     }
 
@@ -23,10 +23,11 @@ public class IteratorForMyArray<E> implements Iterator<E> {
 
     /**
      * Метод возвращает элемент
+     * @return
      */
     @Override
     public E next() {
-        return values[index++];
+        return (E) values[index++];
     }
 
 }
